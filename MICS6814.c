@@ -56,6 +56,9 @@ void setup_pins(int pin_CO,int pin_NO2,int pin_NH3)
     pinCO = pin_CO;
     pinNO2 = pin_NO2;
     pinNH3 = pin_NH3;
+	pinMode(pinCO, INPUT);
+	pinMode(pinNO2, INPUT);
+	pinMode(pinNH3, INPUT);
 }
 
 
