@@ -5,7 +5,7 @@ MICS6814 User Manual
 *               Aniket Paluskar                 *
 /************************************************/
 
-To use this Library, you need to have followint softwares 
+To use this Library, you need to have following softwares 
 
 1. IDE :- Code Composer Studio, Texas Instruments
 2. SDK :- SimpleLink SDk 4.20.01.04 
