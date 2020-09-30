@@ -1,4 +1,9 @@
 MICS6814 User Manual
+/************************************************/
+*                   Author                      *
+
+*               Aniket Paluskar                 *
+/************************************************/
 
 To use this Library, you need to have followint softwares 
 
@@ -19,7 +24,7 @@ Step 3:- Open a new ADC instance using ADC_open(); function for each pin
 
 Step 4:- Start using functions from library which takes ADC_Handle as a parameter.
 
-
+These are the Application Layer functionalities:
         getCO(ADC_handle);
         getNO2(ADC_Handle);
         getNH3(ADC_Handle);
