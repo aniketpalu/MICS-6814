@@ -1,0 +1,29 @@
+MICS6814 User Manual
+
+To use this Library, you need to have followint softwares 
+
+1. IDE :- Code Composer Studio, Texas Instruments
+2. SDK :- SimpleLink SDk 4.20.01.04 
+
+Library is written for LaunchPad CC2652P enabled with ZigBee
+
+To use this library in the application, User needs to complete the steps below
+
+Step 0 :- Installing the softwares and SDK mentioned above
+
+Step 1:- Include the library
+
+Step 2:- As MICS6814 has analog interface, use the TI Driver named ADC.h 
+
+Step 3:- Open a new ADC instance using ADC_open(); function for each pin
+
+Step 4:- Start using functions from library which takes ADC_Handle as a parameter.
+
+
+        getCO(ADC_handle);
+        getNO2(ADC_Handle);
+        getNH3(ADC_Handle);
+
+Note :- 
+1. Values returned by functon have uint16_t as a datatype
+2. The unit of value is ppm(Parts Per Million)
