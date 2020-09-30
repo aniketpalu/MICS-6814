@@ -1,24 +1,30 @@
-#ifndef MICS6814_h
-#define MICS6814_h
+/*
+ * MICS6814.h
+ *
+ *  Created on: Sep 28, 2020
+ *      Author: Aniket Paluskar
+ */
 
-typedef enum{
-    CH_CO,
-    CH_NO2,
-    CH_NH3
-}channel_t;
+#ifndef APPLICATION_MICS6814_MICS6814_H_
+#define APPLICATION_MICS6814_MICS6814_H_
 
-typedef enum{
-    CO,
-    NO2,
-    NH3,
-}gas_t;
+#include <ti/drivers/ADC.h>
 
-int base_NH3, base_RED, base_OX;
-int pin_CO, pin_NO2, pin_NH3;
-
-int getResistance(channel_t channel);
-void setup_base_values(int base_NH3,int base_RED, int base_OX);
-void setup_pins(int pin_CO,int pin_NO2,int pin_NH3);
+/*****************************MACROS*****************************/
+#define MAX_CO_PPM          1000            // Maximum CO Detection Level
+#define MAX_NH3_PPM         300             //Maximum NH3 Detection Level
+#define MAX_NO2_PPM         10              //Maximum No2 detection Level
+#define MAX_RED_OP_VOLTAGE  2.4             //Maximum Output Voltage from RED(CO) Sensor
+#define MAX_NH3_OP_VOLTAGE  2.2             // Maximum Output Voltage from NH3 Sensor
+#define MAX_OX_OP_VOLTAGE   1.7             //Maximum Output Voltage from OX Sensor
 
 
-#endif
+/*
+ * Functions
+ */
+uint16_t getCO(ADC_Handle adc);
+uint16_t getNH3(ADC_Handle adc);
+uint16_t getNO2(ADC_Handle adc);
+
+
+#endif /* APPLICATION_MICS6814_MICS6814_H_ */
