@@ -20,7 +20,7 @@ static uint16_t readings;
 
 
 /**********************************************************
- * @fn               getCO(ADC_Handle adc
+ * @fn               getCO_MICS6814(ADC_Handle adc)
  *
  * @brief            Calculates the CO in the air
  *
@@ -28,7 +28,7 @@ static uint16_t readings;
  *
  * @returns          uint16_t value of CO in ppm units
  */
-uint16_t getCO(ADC_Handle adc)
+uint16_t getCO_MICS6814(ADC_Handle adc)
 {
     float CODetection_Volts = 0.0, CODetection = 0.0;
     CODetection_Volts = getResistance(adc);
@@ -38,7 +38,7 @@ uint16_t getCO(ADC_Handle adc)
 
 
 /**********************************************************
- * @fn               getCO(ADC_Handle adc
+ * @fn               getNH3_MICS6814(ADC_Handle adc)
  *
  * @brief            Calculates the NH3 in the air
  *
@@ -47,7 +47,7 @@ uint16_t getCO(ADC_Handle adc)
  * @returns          uint16_t value of NH3 in ppm units
  */
 
-uint16_t getNH3(ADC_Handle adc)
+uint16_t getNH3_MICS6814(ADC_Handle adc)
 {
     float NH3Detection_Volts = 0.0, NH3Detection = 0.0;
     NH3Detection_Volts = getResistance(adc);
@@ -57,7 +57,7 @@ uint16_t getNH3(ADC_Handle adc)
 
 
 /**********************************************************
- * @fn               getNO2(ADC_Handle adc
+ * @fn               getNO2_MICS6814(ADC_Handle adc)
  *
  * @brief            Calculates the NO2 in the air
  *
@@ -65,7 +65,7 @@ uint16_t getNH3(ADC_Handle adc)
  *
  * @returns          uint16_t value of NO2 in ppm units
  */
-uint16_t getNO2(ADC_Handle adc)
+uint16_t getNO2_MICS6814(ADC_Handle adc)
 {
     float NO2Detection_Volts = 0.0, NO2Detection = 0.0;
     NO2Detection_Volts = getResistance(adc);
